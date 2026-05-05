@@ -21,7 +21,7 @@ a{color:inherit}
 .hero{position:relative;background:#1E2832;color:#FFFFFF;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,40,50,0.55) 0%,rgba(30,40,50,0.85) 100%),
   radial-gradient(ellipse at 70% 20%, rgba(224,123,57,0.18) 0%, transparent 60%);pointer-events:none}
-.hero-art{position:absolute;inset:0;width:100%;height:100%;opacity:0.35}
+.hero-art{position:absolute;inset:0;width:100%;height:100%;opacity:0.35;object-fit:cover;object-position:center}
 .hero-inner{position:relative;padding:96px 0 88px;display:grid;gap:24px}
 .eyebrow{display:inline-block;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#E07B39;font-weight:700;margin:0}
 .display{font-size:clamp(34px,6vw,60px);line-height:1.05;font-weight:800;letter-spacing:-0.01em;margin:0;color:#FFFFFF;max-width:18ch}
@@ -131,44 +131,7 @@ footer .container{display:grid;gap:18px}
 <a id="top"></a>
 
 <section class="hero" aria-label="Hero">
-  <!-- Inline SVG hero art: stylized rooftop scene, no external assets -->
-  <svg class="hero-art" viewBox="0 0 1600 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#2b3946"/>
-        <stop offset="100%" stop-color="#1E2832"/>
-      </linearGradient>
-      <pattern id="shingles" x="0" y="0" width="80" height="28" patternUnits="userSpaceOnUse">
-        <rect width="80" height="28" fill="#243140"/>
-        <path d="M0 28 L40 0 L80 28 Z" fill="none" stroke="#3a4b5d" stroke-width="1"/>
-        <line x1="0" y1="28" x2="80" y2="28" stroke="#1a232c" stroke-width="2"/>
-      </pattern>
-    </defs>
-    <rect width="1600" height="800" fill="url(#sky)"/>
-    <!-- distant ridge -->
-    <path d="M0 520 L240 460 L420 500 L640 440 L880 490 L1120 450 L1340 500 L1600 470 L1600 800 L0 800 Z" fill="#212b36" opacity="0.7"/>
-    <!-- house silhouette right -->
-    <g opacity="0.85">
-      <path d="M820 600 L1120 380 L1420 600 L1420 800 L820 800 Z" fill="#1a232c"/>
-      <path d="M860 595 L1120 410 L1380 595 L1380 720 L860 720 Z" fill="url(#shingles)"/>
-      <rect x="1090" y="630" width="60" height="90" fill="#0e151c"/>
-      <rect x="980" y="640" width="50" height="50" fill="#0e151c"/>
-      <rect x="1240" y="640" width="50" height="50" fill="#0e151c"/>
-    </g>
-    <!-- house silhouette left -->
-    <g opacity="0.55">
-      <path d="M120 640 L320 500 L520 640 L520 800 L120 800 Z" fill="#1a232c"/>
-      <path d="M150 635 L320 520 L490 635 L490 740 L150 740 Z" fill="url(#shingles)"/>
-    </g>
-    <!-- nail / accent dots -->
-    <g fill="#E07B39" opacity="0.8">
-      <circle cx="940" cy="540" r="4"/>
-      <circle cx="1020" cy="500" r="4"/>
-      <circle cx="1100" cy="475" r="4"/>
-      <circle cx="1180" cy="500" r="4"/>
-      <circle cx="1260" cy="540" r="4"/>
-    </g>
-  </svg>
+  <img class="hero-art" src="https://images.craigslist.org/00z0z_kKCGxjbL370_0lM0t2_600x450.jpg" alt="Reno roofing contractor — 21 years experience" loading="eager" fetchpriority="high">
 
   <div class="container hero-inner">
     <p class="eyebrow">Reno, NV · Serving Reno &amp; Sparks Area</p>
@@ -192,18 +155,22 @@ footer .container{display:grid;gap:18px}
     <p class="section-lead">Residential roofing across the Reno &amp; Sparks area — done by the same craftsman who answers your text.</p>
     <div class="cards">
       <article class="card">
+        <img src="https://images.craigslist.org/00909_7X3OJXlOzaH_0t20CI_600x450.jpg" alt="CertainTeed roofing underlayment being installed across full roof deck during shingle replacement" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:4px 4px 0 0;margin:-26px -24px 16px;width:calc(100% + 48px)">
         <h3>Re-Roofing (Tear-Off &amp; Replace)</h3>
         <p>Full tear-off of existing roof and installation of a new system. Asphalt shingles, quality materials, done by the same craftsman for 21 years.</p>
       </article>
       <article class="card">
+        <img src="https://images.craigslist.org/00000_6x88zQ2SogI_0lM0t2_600x450.jpg" alt="Completed asphalt shingle roof with skylight flashing detail on residential home in Reno" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:4px 4px 0 0;margin:-26px -24px 16px;width:calc(100% + 48px)">
         <h3>Roof Replacement</h3>
         <p>Complete new roof installation — residential re-roofs across Reno &amp; Sparks. Old materials removed, decking inspected, new system installed right the first time.</p>
       </article>
       <article class="card">
+        <img src="https://images.craigslist.org/00B0B_c9V4Cxbco6H_0t20CI_600x450.jpg" alt="Residential roof deck after tear-off with bare OSB sheathing and drip edge visible, ready for re-roofing" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:4px 4px 0 0;margin:-26px -24px 16px;width:calc(100% + 48px)">
         <h3>Roof Recovers</h3>
         <p>Overlay installation over existing roof where code and condition allow. Faster, lower-cost option that adds a new layer of protection without full tear-off.</p>
       </article>
       <article class="card">
+        <img src="https://images.craigslist.org/00g0g_fzV9Dna7q18_0t20CI_600x450.jpg" alt="Finished dark gray asphalt shingle roof viewed from above, showing uniform coursing and clean ridge line" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:4px 4px 0 0;margin:-26px -24px 16px;width:calc(100% + 48px)">
         <h3>Roof Repair</h3>
         <p>Leak fixes, shingle replacement, flashing repair, storm damage. Any size — text for a same-week estimate.</p>
       </article>
@@ -219,6 +186,7 @@ footer .container{display:grid;gap:18px}
       <p>No crews, no subcontractors — the roofer you text is the roofer on your roof.</p>
       <p>Re-roofs, replacements, recovers, and repairs across the Reno-Sparks area.</p>
       <p>Text <a href="sms:7754328833">(775) 432-8833</a> to get a same-week estimate.</p>
+      <img src="https://images.craigslist.org/00F0F_kRPjRhQwX72_0t20CI_600x450.jpg" alt="Reno roofer — certified master shingler" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:6px;margin:16px 0">
       <div class="about-call">
         <a class="cta" href="sms:7754328833" aria-label="Text now (775) 432-8833">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
